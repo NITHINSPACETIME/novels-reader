@@ -50,8 +50,11 @@ next-env.d.ts
 
 # scraped caches & assets
 /data/*-cache/
-/public/assets/
+/public/assets/*
 !/public/assets/grid.svg
+!/public/assets/images/
+/public/assets/images/*
+!/public/assets/images/tanya-the-evil/
 /public/content/
 
 

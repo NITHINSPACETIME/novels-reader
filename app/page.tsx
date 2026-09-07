@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Github, Heart, BookOpen, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface NovelItem {
-  id: "cote" | "rezero" | "orv" | "bunny-girl" | "mushoku-tensei" | "lotm" | "reverend-insanity" | "apothecary-diaries" | "tensura" | "tbate";
+  id: "cote" | "rezero" | "orv" | "bunny-girl" | "mushoku-tensei" | "lotm" | "reverend-insanity" | "apothecary-diaries" | "tensura" | "tbate" | "tanya-the-evil";
   title: string;
   href: string;
   cover: string;
@@ -166,12 +166,27 @@ const novelsList: NovelItem[] = [
     descIsItalic: true,
     delay: 1.0,
     searchTags: ["tbate", "the beginning after the end", "arthur", "arthur leywin", "tessia", "tessia eralith", "sylvie"]
+  },
+  {
+    id: "tanya-the-evil",
+    title: "Saga of Tanya the Evil",
+    href: "/tanya-the-evil",
+    cover: "/assets/images/tanya-the-evil/v1/cover.jpg",
+    desc: "“Curse you, Being X! I will survive on reason alone.”",
+    glow: "from-amber-700 to-orange-500",
+    hoverBorder: "group-hover:border-amber-500/40",
+    hoverShadow: "group-hover:shadow-[0_0_50px_rgba(245,158,11,0.35)]",
+    textColor: "group-hover:text-amber-200",
+    fadeBg: "from-[#0a0a0f]/70 via-[#0a0a0f]/10 to-transparent",
+    descIsItalic: true,
+    delay: 1.1,
+    searchTags: ["tanya", "tanya the evil", "saga of tanya the evil", "youjo senki", "being x", "tanya degurechaff", "empire"]
   }
 ];
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
-  const [hoveredCard, setHoveredCard] = useState<"cote" | "rezero" | "orv" | "bunny-girl" | "mushoku-tensei" | "lotm" | "reverend-insanity" | "apothecary-diaries" | "tensura" | "tbate" | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<"cote" | "rezero" | "orv" | "bunny-girl" | "mushoku-tensei" | "lotm" | "reverend-insanity" | "apothecary-diaries" | "tensura" | "tbate" | "tanya-the-evil" | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
